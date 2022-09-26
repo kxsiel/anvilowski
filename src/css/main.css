@@ -1,0 +1,204 @@
+.main{
+    padding: 0 15%;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+.mainInfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    gap: 5px;
+    z-index: 10;
+}
+
+.mainHeading{
+    font-size: 64px;
+    margin: 0;
+    line-height: 60px;
+}
+
+.mainParagraph{
+    font-size: 1.1rem;
+    margin: 0;
+    position: relative;
+    padding-left: 12px;
+    color: rgb(51, 51, 51);
+    transition: 0.3s;
+}
+
+.mainParagraph::before{
+    content: '';
+    width: 2px;
+    height: calc(100% + 55px);
+    border-radius: 24px;
+    background-color: rgba(0, 1, 61, 0.55);
+    position: absolute;
+    left: 4px;
+    top: 0;
+}
+
+.myWork{
+    margin-left: 12px;
+}
+
+.mainBtns{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 50px;
+}
+
+.socialMedia{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.socialIcon{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 8, 36);
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.socialIcon:hover{
+    transform: translateY(-1px);
+    color: rgb(0, 12, 53);
+}
+
+.mainImage{
+    min-height: 400px;
+    width: 40%;
+    min-width: 400px;
+    background-image: url(../assets/mainImage.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 10;
+}
+
+.shape{
+    width: 550px;
+    height: 550px;
+    border-radius: 100% 2% 0% 100% / 87% 10% 10% 41%;
+    position: fixed;
+    top: 50%;
+    right: -400px;
+    transform: translateY(-50%);
+    background: transparent;
+    animation: animation 75s ease infinite;
+}
+
+.shape::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 100% 2% 0% 100% / 87% 10% 10% 41%;
+    padding: 3px;
+    background: linear-gradient(45deg, #0864c6, #23e2fb);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: animation 50s ease infinite;
+}
+
+.shape2{
+    width: 550px;
+    height: 550px;
+    border-radius: 13% 68% 86% 0% / 87% 40% 73% 28% ;
+    position: fixed;
+    top: 50%;
+    left: -400px;
+    transform: translateY(-50%);
+    background: transparent;
+    animation: animation 30s ease infinite;
+}
+
+.shape2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 13% 68% 86% 0% / 87% 40% 73% 28% ;
+    padding: 3px;
+    background: linear-gradient(45deg, rgba(8,100,198,1), rgba(35,226,251,1));
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    animation: animation 50s ease infinite;
+}
+
+@keyframes animation {
+    0%  { border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+    5%  { border-radius: 48% 52% 41% 59% / 66% 37% 63% 34%; }
+    10% { border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%; }
+    15% { border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%; }
+    20% { border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%; }
+    25% { border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%; }
+    30% { border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%; }
+    35% { border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%; }
+    40% { border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%; }
+    45% { border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%; }
+    50% { border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%; }
+    55% { border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%; }    
+    60% { border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%; }
+    65% { border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%; }
+    70% { border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%; }
+    75% { border-radius: 62% 38% 43% 57% / 55% 60% 40% 45%; }
+    80% { border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%; }
+    85% { border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%; }
+    90% { border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%; }
+    95% { border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%; }
+    100%{ border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+}
+
+@media (max-width: 880px){
+    .main{
+        padding: 0 2.5%;
+    }
+
+    .shape{
+        transform: scale(0.7) translateY(-55%);
+        top: 45%;
+    }
+
+    .shape2{
+        transform: scale(0.7) translateY(-55%);
+        top: 45%;
+    }
+
+    .mainImage{
+        display: none;
+    }
+
+    .mainBtns{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        width: 175px;
+    }
+
+    .myWork{
+        width: 100%;
+    }
+
+    .socialMedia{
+        margin-left: 12px;
+        gap: unset;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mainParagraph::before{
+        height: calc(100% + 55px + 48px + 5px);
+    }
+}

@@ -1,0 +1,204 @@
+.contactSection{
+    padding: 15% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5%;
+    flex-direction: column;
+    height: 402px;
+    width: 95%;
+    max-width: 650px;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.05);
+    -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    background-color: white;
+    z-index: 10;
+}
+
+form h1{
+    font-size: 2rem;
+    margin: 0;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.inputArea, .messageArea{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    width: 50%;
+}
+
+label{
+    font-weight: 600;
+    color: rgb(1, 0, 34);
+}
+
+label .iconify{
+    color: red;
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+}
+
+input, textarea{
+    width: calc(100% - 32px);
+    padding: 16px;
+    background-color: rgb(245, 245, 245);
+    color: rgb(37, 37, 48);
+    border-radius: 12px;
+    outline: none;
+    border: 2px solid rgb(230, 230, 230);
+    resize: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+input:focus, textarea:focus{
+    border: 2px solid rgb(172, 172, 172);
+    background-color: rgb(245, 245, 245);
+}
+
+#subjectInput{
+    cursor: pointer;
+}
+
+#subjectInput:focus{
+    border: 2px solid rgb(230, 230, 230);
+}
+
+.formButtons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="reset"]{
+    width: unset;
+    background-color: unset;
+    border: unset;
+    color: rgb(77, 77, 77);
+    cursor: pointer;
+    padding: 0;
+    border-radius: unset;
+}
+
+.subjectSelect{
+    position: relative;
+}
+
+.subjectSelect .dropdownIcon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: rgb(110, 110, 110);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropdownIcon.dropdown{
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.subjectChoose{
+    position: absolute;
+    top: calc(100% - 10px);
+    transform: scale(0.7);
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 0px 26px 1px rgb(0 0 0 / 15%), 0 8px 9px -5px rgb(0 0 0 / 6%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 15;
+}
+
+.subjectChoose.dropdown{
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.subject{
+    padding: 16px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+    font-weight: 600;
+    color: rgb(54, 54, 54);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.subject .iconify{
+    font-size: 1.2rem;
+}
+
+.subject:hover{
+    background-color: rgb(230, 230, 230);
+}
+
+.subject:nth-child(1){
+    border-radius: 12px 12px 0 0;
+}
+
+.subject:nth-child(3){
+    border-radius: 0 0 12px 12px;
+}
+
+.error{
+    color: red;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    gap: 5px;
+}
+
+.errorFlag{
+    border: 2px solid rgb(255, 154, 154);
+    background-color: rgb(255, 239, 239);
+}
+
+@media (max-width: 880px){
+    .contactSection{
+        padding: 15% 5%;
+    }
+}
+
+@media (max-width: 650px){
+    form{
+        height: unset;
+    }
+
+    .form{
+        flex-direction: column;
+    }
+
+    .inputArea, .messageArea{
+        width: 100%;
+    }
+}
